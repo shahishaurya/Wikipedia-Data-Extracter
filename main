@@ -1,0 +1,20 @@
+import wikipedia
+print(wikipedia.summary("Python Programming Language"))
+result = wikipedia.search("Neural networks")
+print("Result search of 'Neural networks':", result)
+page = wikipedia.page(result[0])
+title = page.title
+categories = page.categories
+content = page.content
+links = page.links
+references = page.references
+summary = page.summary
+print("Page content:\n", content, "\n")
+print("Page title:", title, "\n")
+print("Categories:", categories, "\n")
+print("Links:", links, "\n")
+print("References:", references, "\n")
+print("Summary:", summary, "\n")
+language = "es"
+wikipedia.set_lang(language)
+print(f"Summary of web scraping in {language}:", wikipedia.page("Web Scraping").summary)
